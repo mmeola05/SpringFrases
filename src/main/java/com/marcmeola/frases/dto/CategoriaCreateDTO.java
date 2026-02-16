@@ -1,0 +1,18 @@
+package com.marcmeola.frases.dto;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class CategoriaCreateDTO {
+    @Schema(description = "Nombre de la categoría", example = "Literatura")
+    @NotBlank(message = "El nombre no puede estar vacío")
+    @Size(min = 2, max = 50, message = "El nombre debe tener entre 2 y 50 caracteres")
+    private String nombre;
+}

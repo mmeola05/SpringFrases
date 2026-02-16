@@ -1,0 +1,63 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Frase del Día</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 50px;
+        background-color: #f0f2f5;
+      }
+      .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        max-width: 600px;
+      }
+      h1 {
+        color: #333;
+      }
+      .quote {
+        font-size: 1.5rem;
+        font-style: italic;
+        color: #555;
+        margin: 20px 0;
+      }
+      .author {
+        font-weight: bold;
+        color: #007bff;
+      }
+      .category {
+        background: #e2e6ea;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Frase del Día</h1>
+
+      <div th:if="${frase != null}">
+        <p class="quote">
+          "<span th:text="${frase.texto}">Texto de la frase</span>"
+        </p>
+        <p class="author">
+          - <span th:text="${frase.autorNombre}">Autor</span>
+        </p>
+        <span class="category" th:text="${frase.categoriaNombre}"
+          >Categoría</span
+        >
+      </div>
+
+      <div th:if="${frase == null}">
+        <p>No hay frase programada para hoy.</p>
+      </div>
+    </div>
+  </body>
+</html>

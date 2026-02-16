@@ -1,0 +1,18 @@
+package com.marcmeola.frases.config;
+
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class OpenApiConfig {
+
+    @Bean
+    public OpenAPI frasesOpenAPI() {
+        return new OpenAPI()
+                .info(new Info().title("Frases Célebres API")
+                        .description("API for managing famous quotes, authors, and categories.")
+                        .version("v0.0.1"));
+    }
+}
