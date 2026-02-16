@@ -13,11 +13,6 @@ Proyecto API REST en Spring Boot para gestionar y consultar frases célebres, de
 1. Crear una base de datos en PostgreSQL llamada `frases`.
 2. Configurar usuario y contraseña en `src/main/resources/application.properties` (actualmente configurado como `root`/`test`). Asegúrate de que coincidan con tu instalación local de PostgreSQL.
 
-3. Ejecutar la aplicación:
-   ```bash
-   ./gradlew bootRun
-   ```
-
 ## Capturas de Pantalla
 
 
